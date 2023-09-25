@@ -13,6 +13,11 @@ import './models/diccChoco/Ingle.js';
 //import './models/diccChoco/Region.js';
 import './models/diccChoco/Tipo.js';
 import './models/diccChoco/Colaborador.js';*/
+import './models/samaritano/discapacidad.js';
+import './models/samaritano/estadocivil.js';
+import './models/samaritano/peticiones.js';
+import './models/samaritano/solicitud.js';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

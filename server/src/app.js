@@ -18,6 +18,8 @@ import frutas_tab from './routes/memorama/frutas_tab.routes.js';
 import tapijulapa from './routes/memorama/tapijulapa.routes.js';
 import teapa from './routes/memorama/teapa.routes.js';
 
+//Rutas samaritana 
+import samaritanoRoutes from './routes/samaritano/samaritano.routes.js';
 const app = express();
 
 
@@ -51,5 +53,7 @@ app.use(elementos_tab);
 app.use(frutas_tab);
 app.use(tapijulapa);
 app.use(teapa);
+
+app.use(samaritanoRoutes);
 
 export default app;

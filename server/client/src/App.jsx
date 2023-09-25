@@ -18,7 +18,10 @@ import MemoSelectNumCards from './components/memorama/MemoLayouts/MemoSelectNumC
 import MemoMainMenu from './components/memorama/MemoLayouts/MemoMainMenu.jsx';
 
 //Archivos de samaritano
-import FormSamaritano from './components/samaritano/formulario/formSamaritano';
+import FormPublicSamaritano from './components/samaritano/formularios/formPublicSamaritano';
+import LoginAdminSamaritano from './components/samaritano/formularios/loginAdminSamaritano';
+import TablaSamaritano from './components/samaritano/admin/tablaSolicitudes';
+import VerCuentasSamaritano from './components/samaritano/admin/verCuentas';
 
 
 
@@ -43,8 +46,12 @@ function App() {
       <Route path='/memorama/dosjugadores' element={<MainContainerTablero_2P></MainContainerTablero_2P>} />
 
 
-      {/*Rutas para el diccionario del choco*/}
-      <Route path='/samaritano' element={<FormSamaritano></FormSamaritano>} />
+      {/*Rutas para el samaritano*/}
+      <Route path='/samaritano/colaborar' element={<FormPublicSamaritano></FormPublicSamaritano>} />
+      <Route path='/samaritano/login' element={<LoginAdminSamaritano></LoginAdminSamaritano>} />
+      <Route path='/samaritano/admin' element={<TablaSamaritano></TablaSamaritano>} />
+      <Route path='/samaritano/vercuentas' element={<VerCuentasSamaritano></VerCuentasSamaritano>} />
+     
     </Routes>
 
 
