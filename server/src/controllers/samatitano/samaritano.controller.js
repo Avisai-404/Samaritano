@@ -5,7 +5,7 @@ import { peticiones } from "../../models/samaritano/peticiones.js";
 import { solicitud } from "../../models/samaritano/solicitud.js";
 import {sequelize} from '../../database/database.js';
 
-export const getSolicitudes = async (req, res) => {
+export const getPeticiones = async (req, res) => {
    
     try {
         const arrPeticiones = await peticiones.findAll({
@@ -13,9 +13,9 @@ export const getSolicitudes = async (req, res) => {
                 autorizado: true,
             },
             attributes: ['id','peticion',
+            'nombre',
             'apellidos',
             'edad',
-            'autorizado',
             'peticion',
             'direccion',
             'numero_de_contacto'
@@ -57,14 +57,14 @@ export const getPeticion = async (req, res) => {
     
     try {
         const {id} = req.params;
-        const Palabra = await peticiones.findOne({
+        const Peticiones = await peticiones.findOne({
             where:{
                 id: id,
             },
             attributes: ['id','peticion',
+            'nombre',
             'apellidos',
             'edad',
-            'autorizado',
             'peticion',
             'direccion',
             'numero_de_contacto'
@@ -205,7 +205,7 @@ export const deletePeticion = async (req, res) =>{
         const {id} = req.params;
     
     //Primero se elimnan los registros de las tablas relacionadas que tengan el id
-    await Peticiones.destroy({
+    await peticiones.destroy({
         where:{
             id: id,
         } 
@@ -216,17 +216,18 @@ export const deletePeticion = async (req, res) =>{
     }
 }
 
-export const getAllPeticion = async (req, res) => {
+export const getAllPeticiones = async (req, res) => {
     
     try {
-        const arrPeticiones = await Peticiones.findAll({ 
+        const arrPeticiones = await peticiones.findAll({ 
             attributes: ['id','peticion',
+            'nombre',
             'apellidos',
             'edad',
-            'autorizado',
             'peticion',
             'direccion',
-            'numero_de_contacto'
+            'numero_de_contacto',
+            'autorizado'
             ],
             include: [
                 {

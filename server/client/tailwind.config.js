@@ -18,6 +18,8 @@ export default {
 
         mrColor: '#B31942',
 
+        samColor:'#052bee',
+
         modal: 'rgba(0, 0, 0, 0.35)'
       },
       maxHeight:{

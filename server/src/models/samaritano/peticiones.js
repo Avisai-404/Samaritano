@@ -31,8 +31,12 @@ export const peticiones = sequelize.define('peticiones', {
     numero_de_contacto: {
         type: DataTypes.INTEGER,
         allowNull: true
+    },
+    autorizado: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
     }
-});
+    });
 
 
 //Relación con estadocivil

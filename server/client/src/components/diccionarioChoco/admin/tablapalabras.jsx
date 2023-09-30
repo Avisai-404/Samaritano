@@ -71,6 +71,7 @@ const TablaDatos = ({ setValoresForm, newFilter, setFiltro, setModalUpdate,
                     <th className="px-4 py-2">Región</th>
                     <th className="px-4 py-2">Ejemplo(s) Neutro</th>
                     <th className="px-4 py-2">Ejemplo(s) Choco</th>
+                    
                     <th className="px-4 py-2">Opciones</th>
                     {/* ...otras columnas */}
                   </tr>
@@ -144,7 +145,7 @@ const TablaDatos = ({ setValoresForm, newFilter, setFiltro, setModalUpdate,
 
 
           </div>
-
+          
 
           <div className='w-full mt-5'>
 

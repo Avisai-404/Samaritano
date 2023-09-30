@@ -22,6 +22,7 @@ import FormPublicSamaritano from './components/samaritano/formularios/formPublic
 import LoginAdminSamaritano from './components/samaritano/formularios/loginAdminSamaritano';
 import TablaSamaritano from './components/samaritano/admin/tablaSolicitudes';
 import VerCuentasSamaritano from './components/samaritano/admin/verCuentas';
+import CardSamaritano from './components/samaritano/Card/seccSamaritano';
 
 
 
@@ -51,6 +52,7 @@ function App() {
       <Route path='/samaritano/login' element={<LoginAdminSamaritano></LoginAdminSamaritano>} />
       <Route path='/samaritano/admin' element={<TablaSamaritano></TablaSamaritano>} />
       <Route path='/samaritano/vercuentas' element={<VerCuentasSamaritano></VerCuentasSamaritano>} />
+      <Route path='/samaritano' element={<CardSamaritano></CardSamaritano>} />
      
     </Routes>
 

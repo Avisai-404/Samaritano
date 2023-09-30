@@ -75,7 +75,7 @@ const TablaDatos = ({ setValoresForm, newFilter, setFiltro, setModalUpdate,
                 <tbody >
                   {partirData.length > 0 ?
 
-                    partirData.map((e) => (
+                    partirData.map((e, index) => (
                       <tr key={e.id} className="hover:bg-gray-100 border-b border-gray-300">
 
                         <td className="py-3">{e.id}</td>
@@ -89,14 +89,6 @@ const TablaDatos = ({ setValoresForm, newFilter, setFiltro, setModalUpdate,
                         <td className="py-3">{e.direccion}</td>
                         <td className="py-3">{e.numero_de_contacto}</td>
                         <td className="py-3 text-black-600 hover:bg-blue-100">
-
-                          {
-                            editmf ? (
-                              <button className="max-w-max my-auto h-min rounded-md bg-blue-600 px-3 py-2 mr-1 text-lg text-white shadow-md font-medium" onClick={() => actualizarDato(e)}>
-                                <i className="fa-solid fa-pen-to-square"></i>
-                              </button>
-                            ) : null
-                          }
 
                           {
                             elimf ? (
@@ -182,7 +174,7 @@ const TablaDatos = ({ setValoresForm, newFilter, setFiltro, setModalUpdate,
                 <tbody >
                   {partirData2.length > 0 ?
 
-                    partirData2.map((e) => (
+                    partirData2.map((e, index) => (
                       <tr key={e.id} className="hover:bg-gray-100 border-b border-gray-300">
 
                         <td className="py-3">{e.id}</td>
@@ -197,7 +189,6 @@ const TablaDatos = ({ setValoresForm, newFilter, setFiltro, setModalUpdate,
                         <td className="py-3">{e.numero_de_contacto}</td>
 
                         <td className="py-3 text-black-600 hover:bg-blue-100">
-                          {apropu ? (<button className="max-w-max my-auto h-min rounded-md bg-blue-600 px-3 py-2 mr-1 text-lg text-white shadow-md font-medium" onClick={() => actualizarDato(e)}><i className="fa-solid fa-pen-to-square"></i></button>) : null}
                           {elipu ? (<button className="max-w-max my-auto h-min rounded-md bg-red-600 px-3 py-2 text-lg text-white shadow-md font-medium" onClick={() => eliminarDato(e.id, e.palabra)}>
                             <i className="fa-solid fa-trash"></i>
                           </button>) : null}

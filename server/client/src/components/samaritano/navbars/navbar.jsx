@@ -23,7 +23,7 @@ const Navbar = ({ rol, mfLogo, mfLink, verDicc, verDiccLink, tar, CS, mfLogoAd, 
   }
 
   return (
-    <nav className="bg-mfColor w-full">
+    <nav className="bg-samColor w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-7">
         <div className="flex items-center justify-between h-16 flex-grow">
           <div className="w-full flex items-center">
@@ -51,11 +51,11 @@ const Navbar = ({ rol, mfLogo, mfLink, verDicc, verDiccLink, tar, CS, mfLogoAd, 
                 {VC == 1 ? <Link to='/diccionario-choco/vercuentas' className="text-white font-medium hover:border-b-2">Ver Colaboradores</Link> : null}
 
               </div>
-              {CS ? <button onClick={cerrarSesion} className="hover:bg-white hover:text-mfColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">
+              {CS ? <button onClick={cerrarSesion} className="hover:bg-white hover:text-samColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">
                 {CS}
               </button>: null}
-              {cola ? <Link to={colaLink} className="hover:bg-white hover:text-mfColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{cola}</Link> : null}
-              {VA ? <Link to='/diccionario-choco/admin' className="hover:bg-white hover:text-mfColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{VA}</Link> : null}
+              {cola ? <Link to={colaLink} className="hover:bg-white hover:text-samColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{cola}</Link> : null}
+              {VA ? <Link to='/diccionario-choco/admin' className="hover:bg-white hover:text-samColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{VA}</Link> : null}
             </div>
 
           </div>
@@ -119,11 +119,11 @@ const Navbar = ({ rol, mfLogo, mfLink, verDicc, verDiccLink, tar, CS, mfLogoAd, 
                 </a> : null}
                 {VC == 1 ? <Link to='/diccionario-choco/vercuentas' className="text-white font-medium hover:border-b-2">Ver Colaboradores</Link> : null}
            
-            {CS ? <button onClick={cerrarSesion} className="hover:bg-white hover:text-mfColor hover:font-semibold text-white font-medium py-2 px-3 rounded-lg">
+            {CS ? <button onClick={cerrarSesion} className="hover:bg-white hover:text-samColor hover:font-semibold text-white font-medium py-2 px-3 rounded-lg">
                 {CS}
               </button>: null}
-              {cola ? <Link to={colaLink} className="hover:bg-white hover:text-mfColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{cola}</Link> : null}
-              {VA ? <Link to='/diccionario-choco/admin' className="hover:bg-white hover:text-mfColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{VA}</Link> : null}
+              {cola ? <Link to={colaLink} className="hover:bg-white hover:text-samColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{cola}</Link> : null}
+              {VA ? <Link to='/diccionario-choco/admin' className="hover:bg-white hover:text-samColor hover:font-semibold border-solid border-2 border-white text-white font-medium py-2 px-3 rounded-lg">{VA}</Link> : null}
           </div>
         </div>
       )}
